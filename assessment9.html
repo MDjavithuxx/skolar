@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's News</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 36px;
+        }
+        header nav {
+            margin: 0;
+        }
+        header nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .menu-container {
+            background-color: #1a1a1a;
+            color: #fff;
+            width: 200px;
+            padding-top: 70px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        .menu-container a {
+            color: #fff;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+        }
+        .menu-container a:hover {
+            background-color: #555;
+        }
+        main {
+            margin-left: 220px;
+            padding: 20px;
+            flex: 1;
+            margin-top: 70px;
+        }
+        section {
+            padding-right: 20px;
+        }
+        article img {
+            max-width: 30%;
+            height: 40%;
+            margin-bottom: 15px;
+        }
+        aside {
+            padding-left: 20px;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            margin-left: 220px;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Today's News</h1>
+
+    </header>
+
+    <div class="menu-container">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <main>
+        <section>
+            <article>
+                <h2>Weather Update</h2>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsQG0jL__gCmN52WCELtWlFSYemmW3T7845Q&s" alt="Weather Forecast">
+                <p>Today’s weather forecast predicts scattered thunderstorms in the afternoon with temperatures ranging from 70°F to 85°F. Residents are advised to stay indoors during the storm and to take necessary precautions.</p>
+                <p>Meanwhile, the weekend is expected to be sunny and warm, perfect for outdoor activities. Make sure to stay hydrated and apply sunscreen to protect yourself from the sun's UV rays.</p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>Sports news</h2>
+                <img src="data:image/jpeg;base64,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">
+                <p>T20 World Cup: Pooran smashes big six-hitting records in West Indies win over Afghanistan. WI vs AFG, T20 World Cup 2024: Nicholas Pooran broke significant six-hitting records with his 53-ball 98 for the West Indies during their 104-run win against Afghanistan in St Lucia on Tuesday.</p>
+            </article>
+        </section>
+
+        <aside>
+            <h2>Related Links</h2>
+            <ul>
+                <li><a href="https://www.thehindu.com/sport/">sports news</a></li>
+                <li><a href="https://www.marketwatch.com">Stock Market News</a></li>
+                <li><a href="https://www.cnbc.com/climate">Climate Change Measures</a></li>
+                <li><a href="https://www.weather.com">Weather Forecast</a></li>
+                <li><a href="https://www.epa.gov">Environmental Protection</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Website</p>
+        <p>Contact us at: <a href="mailto:info@abcnews.com">info@example.com</a></p>
+    </footer>
+</body>
+</html>
